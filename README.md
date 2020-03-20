@@ -12,6 +12,7 @@ I am just making this code for fun.  You may use and modify without permission, 
 - **Pencil Marks** Pencil marks represent the possible values a cell can hold.
 
 ## Goals
+- [ ] Set up board structure
 - [ ] Be able to print the sudoku board.
 - [ ] Be able to find all the pencil marks in each cell.
 - [ ] Solve cells with only one possible value.
@@ -21,10 +22,20 @@ I am just making this code for fun.  You may use and modify without permission, 
 - [ ] Solve hidden pairs.
 - [ ] Solve hidden triples.
 - [ ] Solve hidden quadruples.
-
+- [ ] Solve via brute force.
 ## Board Structure
 ### Cell
 To save space, each cell will contian two values; the actual value of the square (0 if no value has been assigned), and the candidates (stored as a short, but values are stored as individual bits.)
+### Row
+Each row structure contains 9 pointers to each of the cells.
+### Column
+Each column structure contains 9 pointers to each of the cells.
+### Block
+Each block structure contains 9 pointers to each of the cells.
+### General Structure
+Since brute force requires a lot of back and forth motion, all of the cells will be next to each other.  That way, to speed up incrementing around the board, all that the program needs is the location in memory of the first cell.
+
+
 
 ## References
 
