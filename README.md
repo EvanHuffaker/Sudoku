@@ -12,6 +12,7 @@ I am just making this code for fun.  You may use and modify without permission, 
 - **Pencil Marks** Pencil marks represent the possible values a cell can hold.
 
 ## Goals
+- [ ] Import and export sudoku boards in standardized format.
 - [ ] Set up board structure
 - [ ] Be able to print the sudoku board.
 - [ ] Be able to find all the pencil marks in each cell.
