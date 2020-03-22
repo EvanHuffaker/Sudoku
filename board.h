@@ -15,6 +15,6 @@ typedef struct _cell_{
 
 
 /* Allocation functions */
-board* create_board(unsigned short cells[DIM][DIM]);
+void create_board(unsigned short cells[DIM][DIM]);
 void _create_cells_(unsigned short bd[DIM][DIM], cell cells[DIM][DIM]);
 #endif /* BOARD_H_ */

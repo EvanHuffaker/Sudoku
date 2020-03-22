@@ -3,35 +3,31 @@
 
 void _print_hboarder_(){
 	int i;
-	for(i = 0; i < 9; i++){
-		if(!(i%3))
-			printf("+");
+	for(i = 0; i < 3; i++){
 		printf("+---");
 	}
-	printf("++\n");
+	printf("+\n");
 }
 
-void _print_vboarder_(group* row){
+void _print_vboarder_(cell row[DIM]){
 	int i;
-	group* cur = row;
-	cell* curC;
 	for(i = 0; i < 9; i++){
 		if(!(i%3))
-			printf("||");
-		curC = *(cur->items+i);
-		if(curC->value)
-			printf("%d",curC->value);
+			printf("|");
+		if(row[i].value)
+			printf("%d",row[i].value);
 		else
 			printf("-");
 	}
-	printf("||");
+	printf("|\n");
 }
 
-void print_board(board* bd){
+void print_board(cell bd[DIM][DIM]){
 	int i;
 	for(i = 0; i < 9; i++){
 		if(!(i%3))
 			_print_hboarder_();
-		_print_vboarder_(bd->rows+i);
+		_print_vboarder_(bd[i]);
 	}
+	_print_hboarder_();
 }

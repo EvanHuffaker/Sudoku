@@ -17,6 +17,6 @@ int main(void) {
 	};
 	cell A[DIM][DIM];
 	 _create_cells_(bd,A);
-	printf("%d",A[0][0].value);
+	 print_board(A);
 	return EXIT_SUCCESS;
 }
