@@ -14,7 +14,7 @@ I am just making this code for fun.  You may use and modify without permission, 
 ## Goals
 - [ ] Import and export sudoku boards in standardized format.
 - [ ] Set up board structure
-- [ ] Be able to print the sudoku board.
+- [x] Be able to print the sudoku board.
 - [ ] Be able to find all the pencil marks in each cell.
 - [ ] Solve cells with only one possible value.
 - [ ] Solve hidden singles.
