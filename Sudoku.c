@@ -4,7 +4,7 @@
 #include "board.h"
 
 int main(void) {
-	unsigned short bd[DIM][DIM] =
+	unsigned short nums[DIM][DIM] =
 	{{5,6,9,2,0,0,0,0,0},
 			{2,8,0,6,1,5,4,0,9},
 			{4,1,0,0,8,9,5,2,6},
@@ -15,8 +15,7 @@ int main(void) {
 			{6,0,1,4,5,2,0,9,0},
 			{0,4,5,0,0,8,6,1,2}
 	};
-	cell A[DIM][DIM];
-	 _create_cells_(bd,A);
-	 print_board(A);
+	board bd;
+	create_board(nums,&bd);
 	return EXIT_SUCCESS;
 }

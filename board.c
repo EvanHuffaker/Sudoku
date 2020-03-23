@@ -11,26 +11,28 @@ void _create_cells_(unsigned short bd[DIM][DIM], cell cells[DIM][DIM]){
 	}
 }
 void create_board(unsigned short cells[DIM][DIM], board *bd){
-	_create_cells(cells,bd->cells);
+	_create_cells_(cells,bd->cells);
 	int i;
 	for(i = 0; i < 9; i++){
 		_create_rows_(bd,i);
 		_create_cols_(bd,i);
-		_create_block_(bd,i);
+		_create_blocks_(bd,i);
 	}
 }
 
 void _create_rows_(board* bd, unsigned short row){
 	unsigned short i;
 	for(i = 0; i < DIM; i++){
-		bd->rows[row]->items[i] = bd->cells[row][i];
+		bd->rows[row].items[i] =
+				&bd->cells[row][i];
 	}
 }
 
 void _create_cols_(board* bd, unsigned short col){
 	unsigned short i;
 	for(i = 0; i < DIM; i++){
-		bd->cols[col]->items[i] = bd->cells[i][col];
+		bd->cols[col].items[i] =
+				&bd->cells[i][col];
 	}
 }
 
@@ -40,7 +42,8 @@ void _create_blocks_(board* bd, unsigned short blk){
 	jstart = (blk%3)*3;
 	for(i = istart; i < istart+3; i++){
 		for(j = jstart; j < jstart+3; j++){
-			bd->blocks[blk]->items[(i-istart)*3 + j-jstart] = bd->cells[i][j];
+			bd->blocks[blk].items[(i-istart)*3 + j-jstart] =
+					&bd->cells[i][j];
 		}
 	}
 }

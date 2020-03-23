@@ -12,7 +12,7 @@ typedef struct _cell_{
 }cell;
 
 typedef struct _group_{
-	cell* items[DIM];
+	cell *items[DIM];
 }group;
 
 typedef struct _board_{
