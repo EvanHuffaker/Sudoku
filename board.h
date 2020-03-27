@@ -8,8 +8,8 @@
 #define ushort unsigned short
 
 typedef struct _cell_{
-	unsigned short value;
-	unsigned short candidates;			//stored in each bit
+	ushort value;
+	ushort candidates;			//stored in each bit
 	struct _group_* row;							//pointer to the row the cell is in
 	struct _group_* col;							//pointer to the column the cell is in
 	struct _group_* block;						//pointer to the block the cell is in

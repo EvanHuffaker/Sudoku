@@ -16,9 +16,9 @@ void setup_pencils(board* bd){
 void set_cell(cell* C, ushort val){		//Does not check if it is a valid assignment
 	C->value = val;				//assignment
 	ushort shift = 1<<(val-1);
-	C->row->solved  += shift;
-	C->col->solved += shift;
-	C->block->solved += shift;
+	C->row->solved  |= shift;
+	C->col->solved |= shift;
+	C->block->solved |= shift;
 	_update_pencils_(C->row);
 	_update_pencils_(C->col);
 	_update_pencils_(C->block);
@@ -27,6 +27,6 @@ void set_cell(cell* C, ushort val){		//Does not check if it is a valid assignmen
 void _update_pencils_(group* gr){
 	ushort i;
 	for(i = 0; i < DIM; i++){
-		(*(gr->items[i])).candidates =  (*(gr->items[i])).candidates&(~gr->solved);
+		(*(gr->items[i])).candidates &=  ~gr->solved;
 	}
 }

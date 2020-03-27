@@ -17,5 +17,6 @@ int main(void) {
 	};
 	board bd;
 	create_board(nums,&bd);
+
 	return EXIT_SUCCESS;
 }
