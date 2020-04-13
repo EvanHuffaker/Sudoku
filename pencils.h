@@ -1,8 +1,6 @@
 #ifndef PENCILS_H_
 #define PENCILS_H_
 #include "board.h"
-#define ushort unsigned short
-#define DIM 9
 
 void setup_pencils(board* bd);
 
