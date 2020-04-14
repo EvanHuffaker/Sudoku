@@ -1,13 +1,15 @@
 # Sudoku Solver
 The program is written in C for high efficiency so that the sudoku puzzles can be solved quickly on lightweight hardware, such as a microcontroller.
 
+
+## Disclamer
+I am just making this code for fun.  You may use and modify without permission, although please do not reupload my files anywhere else.
+
 ## Use Case examples
 - Microcontrollers (C compatable)
 - Old Computers
 - Solving many puzzles in a short time
-
-## Disclamer
-I am just making this code for fun.  You may use and modify without permission, although please do not reupload my files anywhere else for redistribution.
+for redistribution.
 
 ## Used terminology
 - **Cell** A cell is a single square which can contain a value or pencil marks.
@@ -29,7 +31,26 @@ Each block structure contains 9 pointers to each of the cells.
 ### General Structure
 Since brute force requires a lot of back and forth motion, all of the cells will be next to each other.  That way, to speed up incrementing around the board, all that the program needs is the location in memory of the first cell.
 
+## Program State
+Currently, the puzzle can only solve hidden singles and naked singles.
 
+## Next Update:
+- Locked Candidates (Pointing and claiming)
+- Brute force
+
+## Other Plans
+- Naked Pairs
+- Hidden Pairs
+- Naked Triple
+- Hidden Triple
+- Naked Quadruple
+- Hidden Quadruple
+- X-Wing (finned and sashimi)
+- XY-Wing
+- XYZ-Wing
+- W-Wing
+- Unique Rectangles
+- Binary Universal Graveyard + 1 (BUG+1)
 
 ## References
 
